@@ -3,6 +3,9 @@ pipeline {
     tools {
         maven 'Maven'
     }
+    parameters {
+        booleanParam(name: 'executeTests', defaultValue: true, description: 'Run tests?')
+    }
     stages {
         stage('Build') {
             steps {
